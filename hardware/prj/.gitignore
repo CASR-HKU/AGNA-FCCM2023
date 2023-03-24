@@ -1,0 +1,6 @@
+*
+!/.gitignore
+!/project.tcl
+!/generate.tcl
+!/update_prj.tcl
+!/Makefile

@@ -1,0 +1,8 @@
+{
+    "name": "zcu102_128_8",
+    "max_dsp": 2520,
+    "max_bram": 1824,
+    "frequency": 250,
+    "dbus_width": 128,
+    "data_width": 8
+}

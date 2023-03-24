@@ -1,0 +1,8 @@
+{
+    "name": "zcu102_256_16",
+    "max_dsp": 2520,
+    "max_bram": 1824,
+    "frequency": 250,
+    "dbus_width": 256,
+    "data_width": 16
+}

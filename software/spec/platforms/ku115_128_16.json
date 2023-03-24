@@ -1,0 +1,8 @@
+{
+    "name": "ku115_128_16",
+    "max_dsp": 5520,
+    "max_bram": 4320,
+    "frequency": 200,
+    "dbus_width": 128,
+    "data_width": 16
+}

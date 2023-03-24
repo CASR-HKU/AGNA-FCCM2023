@@ -1,0 +1,10 @@
+#ifndef __PARAM_H__
+#define __PARAM_H__
+
+#define PARAM_AH $PARAM_AH$
+#define PARAM_AW $PARAM_AW$
+#define PARAM_PE_NUM $PARAM_PE_NUM$
+#define PARAM_DATA_WIDTH $PARAM_DATA_WIDTH$
+#define PARAM_DBUS_WIDTH $PARAM_DBUS_WIDTH$
+
+#endif

@@ -1,0 +1,14 @@
+`ifndef PARAM_SV
+`define PARAM_SV
+
+`define HW_DSP_CASCADED
+`define HW_CONFIG_PE_NUM $PARAM_PE_NUM$
+`define HW_CONFIG_A_K $PARAM_AK$
+`define HW_CONFIG_A_C $PARAM_AC$
+`define HW_CONFIG_A_I $PARAM_AI$
+`define HW_CONFIG_A_J $PARAM_AJ$
+`define HW_CONFIG_A_H $PARAM_AH$
+`define HW_CONFIG_A_W $PARAM_AW$
+`define HW_CONFIG_MACC_WIDTH $PARAM_DATA_WIDTH$
+
+`endif
