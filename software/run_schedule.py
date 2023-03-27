@@ -43,7 +43,7 @@ def main():
     log_path = os.path.join(output_dir, "agna.log")
     fh = add_filehdlr(log_path, False)
     agna.run()
-    # agna.simulate()
+    agna.simulate()
     agna.update_csv()
     agna.update_json()
     rm_filehdlr(fh)
