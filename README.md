@@ -53,3 +53,43 @@ AGNA is an open-source hardware generator for Deep Neural Network(DNN). Given th
     make all
     ```
     Generated project and bitstream are in `hardware/prj`.
+
+## Build software environment from scratch
+
+1. Prerequisite:
+
+    ```bash
+    sudo apt update
+    sudo apt install -y wget cmake g++ m4 xz-utils libgmp-dev unzip zlib1g-dev libboost-program-options-dev libboost-serialization-dev libboost-regex-dev libboost-iostreams-dev libtbb-dev libreadline-dev pkg-config git liblapack-dev libgsl-dev flex bison libcliquer-dev gfortran file dpkg-dev libopenblas-dev rpm
+    sudo apt install -y libopenmpi-dev libomp-dev
+    ```
+
+1. Build `Ipopt`:
+
+    ```bash
+    mkdir coinbrew && cd coinbrew
+    wget https://raw.githubusercontent.com/coin-or/coinbrew/master/coinbrew
+    chmod +x coinbrew
+    ./coinbrew fetch Ipopt@3.14.10
+    export IPOPT_DIR=/tools/Ipopt  # install directory of Ipopt, could be other places
+    mkdir -p ${IPOPT_DIR}
+    ./coinbrew build Ipopt --prefix=${IPOPT_DIR} --test --no-prompt --verbosity=3
+    sudo ./coinbrew install Ipopt --no-prompt
+    ```
+
+1. Build `SCIPOpt`:
+
+    - Download [scipoptsuite-8.0.3.tgz](https://scipopt.org/download.php?fname=scipoptsuite-8.0.3.tgz).
+
+    - Install:
+
+    ```bash
+    tar xzf scipoptsuite-8.0.3.tgz
+    cd scipoptsuite-8.0.3
+    mkdir build && cd build
+    export SCIPOPT_PATH=/tools/scipoptsuite-8.0.3 # install directory of SCIPOPT, could be other places
+    cmake .. -DCMAKE_INSTALL_PREFIX=${SCIPOPT_PATH} -DIPOPT_DIR=${IPOPT_DIR} -DTPI=omp
+    make
+    make check
+    make install
+    ```

@@ -96,7 +96,7 @@ class ArchSearch(BaseRnR):
         constr_list.append(
             SolverConstr("arch_HW", lambda var_d: var_d["A_H"] * var_d["A_W"] <= 32)
         )
-        constr_list.append(SolverConstr("arch_PE", lambda var_d: var_d["pe_num"] >= 16))
+        constr_list.append(SolverConstr("arch_PE", lambda var_d: var_d["pe_num"] >= 8))
         constr_list.append(
             SolverConstr("arch_PE", lambda var_d: var_d["pe_num"] <= 128)
         )

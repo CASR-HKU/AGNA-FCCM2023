@@ -206,7 +206,7 @@ class AGNA:
         # create and run op_schedule
         op_schedule_config = {
             # 'bound_range': 4,
-            'force_full_w': True,
+            # 'force_full_w': True,
             'timelimits': 300,
             'max_of_2': False,
         }
