@@ -4,7 +4,7 @@ Model-Platform Optimized Deep Neural Network Accelerator Generation through Mixe
 
 ## Introduction
 
-AGNA is an open-source hardware generator for Deep Neural Network(DNN). Given the specifications of target DNN model and FPGA platform, AGNA can produce FPGA accelerator that is optimized for target model-platform combination. AGNA can be generally separated into software and hardware parts:
+AGNA is an open-source hardware generator for Deep Neural Network (DNN). Given the specifications of target DNN model and FPGA platform, AGNA can produce FPGA accelerator that is optimized for target model-platform combination. AGNA can be generally separated into software and hardware parts:
 
 - Software: AGNA analyzes the specifications of each layer and solves mixed-integer geometric programming. AGNA first generates a high-efficiency accelerator based on a general PE array architecture. Then based on the generated accelerator, AGNA generates the schedule and instruction of each layer.
 - Hardware: AGNA provides the synthesizable source code of each hardware component. The target accelerator can be built by substituting the parameter with the generated one from the software. A template project for zcu102 is also provided.
@@ -17,9 +17,9 @@ AGNA is an open-source hardware generator for Deep Neural Network(DNN). Given th
 
 ## Usage
 
-- Run in docker(Optional):
+- Run in docker (Optional):
     
-    We also provide a docker image that contains the necessary environment(except for Vivado). The image can be built by:
+    We also provide a docker image that contains the necessary environment (except for Vivado). The image can be built by:
 
     ```bash
     docker build --build-arg HOST_UID=`id -u` --build-arg HOST_GID=`id -g` -t agna-local .

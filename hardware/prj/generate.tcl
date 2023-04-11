@@ -1,13 +1,11 @@
 set bd_name chip_bd
 set synth_name synth_1
 set impl_name impl_1
-set clk_freq 100
 
 open_project agna.xpr
 upgrade_ip [get_ips agna_aux_0 core_controller_0 layout_convert_0]
 open_bd_design [get_files ${bd_name}.bd]
 
-set_property -dict [list CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ ${clk_freq}] [get_bd_cells zynq_ultra_ps_e_0]
 validate_bd_design
 save_bd_design
 

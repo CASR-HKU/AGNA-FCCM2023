@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import re
 
 
@@ -22,16 +23,17 @@ def generate_param_header(arch, tpl_file, output_file):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("arch_file", type=str)
+    parser.add_argument("-t", "--target_dir", type=str, default="../hardware")
     args = parser.parse_args()
-
+    print(args.arch_file, args.target_dir)
     # load arch json
     with open(args.arch_file, "r") as f:
         arch = json.load(f)
 
     # generate c header
-    c_param_path = "../hardware/hls/hls_src/param.h"
+    c_param_path = os.path.join(args.target_dir, "hls/hls_src/param.h")
     generate_param_header(arch, c_param_path + ".tpl", c_param_path)
-    sv_param_path = "../hardware/rtl/param.sv"
+    sv_param_path = os.path.join(args.target_dir, "rtl/param.sv")
     generate_param_header(arch, sv_param_path + ".tpl", sv_param_path)
 
 
