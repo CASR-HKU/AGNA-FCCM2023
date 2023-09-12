@@ -1,0 +1,8 @@
+{
+    "name": "ultra96_128_16",
+    "max_dsp": 360,
+    "max_bram": 432,
+    "frequency": 250,
+    "dbus_width": 128,
+    "data_width": 16
+}

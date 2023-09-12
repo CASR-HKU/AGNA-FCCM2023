@@ -1,0 +1,8 @@
+{
+    "name": "u200_512_8",
+    "max_dsp": 5880,
+    "max_bram": 3600,
+    "frequency": 250,
+    "dbus_width": 512,
+    "data_width": 8
+}
