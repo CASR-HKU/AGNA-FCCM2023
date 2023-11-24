@@ -2,6 +2,22 @@
 
 Model-Platform Optimized Deep Neural Network Accelerator Generation through Mixed-integer Geometric Programming
 
+Link to the paper: https://ieeexplore.ieee.org/abstract/document/10171535
+
+Citation:
+
+```
+@INPROCEEDINGS{10171535,
+  author={Ding, Yuhao and Wu, Jiajun and Gao, Yizhao and Wang, Maolin and So, Hayden Kwok-Hay},
+  booktitle={2023 IEEE 31st Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)}, 
+  title={Model-Platform Optimized Deep Neural Network Accelerator Generation through Mixed-Integer Geometric Programming}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={83-93},
+  doi={10.1109/FCCM57271.2023.00018}}
+```
+
 ## Introduction
 
 AGNA is an open-source hardware generator for Deep Neural Network (DNN). Given the specifications of target DNN model and FPGA platform, AGNA can produce FPGA accelerator that is optimized for target model-platform combination. AGNA can be generally separated into software and hardware parts:
